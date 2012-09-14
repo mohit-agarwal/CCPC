@@ -111,7 +111,7 @@ short bufferedReadShort(struct BufferedInputStream * bis) {
   
   char * tempPtr;
   short value = (short) strtol(bis->bufferPointer, &tempPtr, 0);
-  if(*tempPtr == bis->bufferPointer) {
+  if(tempPtr == bis->bufferPointer) {
     setError(bis);
     return 0;
   }
@@ -140,7 +140,7 @@ int bufferedReadInt(struct BufferedInputStream * bis) {
 
   char * tempPtr;
   int value = (int) strtol(bis->bufferPointer, &tempPtr, 0);
-  if(*tempPtr == bis->bufferPointer) {
+  if(tempPtr == bis->bufferPointer) {
     setError(bis);
     return 0;
   }
@@ -170,7 +170,7 @@ long bufferedReadLong(struct BufferedInputStream * bis) {
 
   char * tempPtr;
   long value = (long) strtol(bis->bufferPointer, &tempPtr, 0);
-  if(*tempPtr == bis->bufferPointer) {
+  if(tempPtr == bis->bufferPointer) {
     setError(bis);
     return 0;
   }
@@ -200,7 +200,7 @@ long long bufferedReadLongLong(struct BufferedInputStream * bis) {
 
   char * tempPtr;
   long long value = (long long) strtol(bis->bufferPointer, &tempPtr, 0);
-  if(*tempPtr == bis->bufferPointer) {
+  if(tempPtr == bis->bufferPointer) {
     setError(bis);
     return 0;
   }
@@ -230,7 +230,7 @@ float bufferedReadFloat(struct BufferedInputStream * bis) {
 
   char * tempPtr;
   float value = (float) strtof(bis->bufferPointer, &tempPtr);
-  if(*tempPtr == bis->bufferPointer) {
+  if(tempPtr == bis->bufferPointer) {
     setError(bis);
     return 0;
   }
@@ -260,7 +260,7 @@ double bufferedReadDouble(struct BufferedInputStream * bis) {
 
   char * tempPtr;
   double value = (double) strtod(bis->bufferPointer, &tempPtr);
-  if(*tempPtr == bis->bufferPointer) {
+  if(tempPtr == bis->bufferPointer) {
     setError(bis);
     return 0;
   }
@@ -290,7 +290,7 @@ long double bufferedReadLongDouble(struct BufferedInputStream * bis) {
 
   char * tempPtr;
   long double value = (long double) strtod(bis->bufferPointer, &tempPtr);
-  if(*tempPtr == bis->bufferPointer) {
+  if(tempPtr == bis->bufferPointer) {
     setError(bis);
     return 0;
   }

@@ -2,7 +2,7 @@
 #include "BufferedInput.h"
 
 int main() {
-    struct BufferedInputStream * bis = bufferedInputStream();
+    struct BufferedInputStream * bis = bufferedInputStream(786432ull/20);
     int n;
     long double d;
     n = bufferedReadInt(bis);
